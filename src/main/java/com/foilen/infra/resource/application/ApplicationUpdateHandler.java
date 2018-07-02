@@ -40,11 +40,11 @@ public class ApplicationUpdateHandler extends AbstractCommonMethodUpdateEventHan
         if (unixUsers.size() > 1) {
             throw new IllegalUpdateException("An application cannot have multiple users to run as (only 0 or 1)");
         }
-        Integer neededRunAs = null;
+        Long neededRunAs = null;
         if (!unixUsers.isEmpty()) {
             neededRunAs = unixUsers.get(0).getId();
         }
-        Integer currentRunAs = resource.getApplicationDefinition().getRunAs();
+        Long currentRunAs = resource.getApplicationDefinition().getRunAs();
         logger.debug("neededRunAs: {} ; currentRunAs: {}", neededRunAs, currentRunAs);
         if ((neededRunAs == null && currentRunAs != null) || (neededRunAs != null && !neededRunAs.equals(currentRunAs))) {
             logger.debug("Updating runAs to: {}", neededRunAs);
