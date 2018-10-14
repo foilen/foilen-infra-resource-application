@@ -33,6 +33,8 @@ import com.google.common.collect.ComparisonChain;
  */
 public class Application extends AbstractIPResource implements Comparable<Application> {
 
+    public static final String RESOURCE_TYPE = "Application";
+
     public static final String PROPERTY_NAME = "name";
     public static final String PROPERTY_DESCRIPTION = "description";
     public static final String PROPERTY_APPLICATION_DEFINITION = "applicationDefinition";

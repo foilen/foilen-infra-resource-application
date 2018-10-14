@@ -21,7 +21,7 @@ public class FoilenApplicationPluginDefinitionProvider implements IPPluginDefini
     public IPPluginDefinitionV1 getIPPluginDefinition() {
         IPPluginDefinitionV1 pluginDefinitionV1 = new IPPluginDefinitionV1("Foilen", "Application", "To manage applications", "1.0.0");
 
-        pluginDefinitionV1.addCustomResource(Application.class, "Application", //
+        pluginDefinitionV1.addCustomResource(Application.class, Application.RESOURCE_TYPE, //
                 Arrays.asList(Application.PROPERTY_NAME), //
                 Arrays.asList( //
                         Application.PROPERTY_NAME, //
